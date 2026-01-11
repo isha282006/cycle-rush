@@ -252,3 +252,37 @@ button:hover{
     width:90%;
   }
 }
+/* DARK MODE */
+body.dark{
+  background:#0f172a;
+  color:white;
+}
+
+body.dark header{
+  background:#020617;
+}
+
+body.dark nav a{
+  color:white;
+}
+
+body.dark .hero{
+  background:linear-gradient(135deg,#020617,#0f172a,#020617);
+}
+
+body.dark .features div,
+body.dark .how-box div,
+body.dark .price-box div,
+body.dark .test-box div,
+body.dark .review-form,
+body.dark .contact-box form,
+body.dark .about-box div{
+  background:#020617;
+  color:white;
+}
+
+body.dark .btn{
+  background:#22c55e;
+  color:black;
+}
+
