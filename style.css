@@ -260,4 +260,41 @@ input:focus, select:focus{
 .stations li{
   margin:10px;
 }
+.contact{
+  padding:60px;
+  text-align:center;
+  color:#0f5132;
+}
+
+.contact-box{
+  display:flex;
+  justify-content:center;
+  gap:40px;
+  margin-top:30px;
+}
+
+.contact-box form{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  width:300px;
+  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+}
+
+.contact-box textarea{
+  width:100%;
+  height:100px;
+  padding:10px;
+  margin:10px 0;
+  border-radius:10px;
+  border:1px solid #ccc;
+}
+
+.contact-info{
+  background:#d1fae5;
+  padding:30px;
+  border-radius:20px;
+  width:300px;
+}
+
 
