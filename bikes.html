@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Rent Bike | Cycle Rush</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header>
+  <h1>🚴 Cycle Rush</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="bikes.html">Rent Bike</a>
+  </nav>
+</header>
+
+<div class="form-box">
+  <h2>Book Your Cycle</h2>
+
+  <form id="bookingForm">
+    <input type="text" placeholder="Your Name" required>
+    <input type="tel" placeholder="Mobile Number" required>
+
+    <select required>
+      <option>Select Cycle</option>
+      <option>Normal Cycle</option>
+      <option>Gear Cycle</option>
+      <option>Electric Cycle</option>
+    </select>
+
+    <input type="date" required>
+    <button type="submit">Book Now</button>
+  </form>
+
+  <p id="msg"></p>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
