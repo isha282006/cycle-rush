@@ -1,12 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+
+/* Global */
 *{
   margin:0;
   padding:0;
   box-sizing:border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family:'Poppins', sans-serif;
 }
 
 body{
   background:#f4fdf7;
+  color:#0f5132;
 }
 
 /* Header */
@@ -17,10 +21,10 @@ header{
   display:flex;
   justify-content:space-between;
   align-items:center;
-}
-
-header h1{
-  font-size:26px;
+  position:sticky;
+  top:0;
+  z-index:100;
+  box-shadow:0 5px 15px rgba(0,0,0,0.2);
 }
 
 nav a{
@@ -36,26 +40,29 @@ nav a:hover{
 
 /* Hero */
 .hero{
-  height:90vh;
-  background:linear-gradient(to right, #0f5132, #16a34a);
+  min-height:90vh;
+  background:linear-gradient(135deg,#0f5132,#16a34a,#22c55e);
   color:white;
   display:flex;
   justify-content:center;
   align-items:center;
   flex-direction:column;
   text-align:center;
+  padding:40px;
 }
 
 .hero h2{
-  font-size:50px;
-  margin-bottom:20px;
+  font-size:48px;
+  margin-bottom:15px;
 }
 
 .hero p{
-  font-size:20px;
+  font-size:18px;
+  max-width:700px;
   margin-bottom:30px;
 }
 
+/* Button */
 .btn{
   background:white;
   color:#0f5132;
@@ -64,188 +71,61 @@ nav a:hover{
   text-decoration:none;
   font-size:18px;
   transition:0.3s;
+  box-shadow:0 10px 30px rgba(0,0,0,0.2);
 }
 
 .btn:hover{
   background:#d1fae5;
+  box-shadow:0 0 25px #a7f3d0;
 }
 
-/* Features */
-.features{
+/* Sections */
+section{
+  padding:60px;
+  text-align:center;
+}
+
+/* Cards */
+.features,
+.how-box,
+.price-box,
+.test-box,
+.about-box,
+.contact-box{
   display:flex;
   justify-content:center;
   gap:30px;
-  padding:60px;
+  flex-wrap:wrap;
 }
 
-.features div{
+.features div,
+.how-box div,
+.price-box div,
+.test-box div,
+.about-box div{
   background:white;
   padding:30px;
-  width:280px;
+  width:250px;
   border-radius:15px;
   box-shadow:0 10px 20px rgba(0,0,0,0.1);
-  text-align:center;
   transition:0.3s;
 }
 
-.features div:hover{
-  transform:translateY(-10px);
+.features div:hover,
+.how-box div:hover,
+.price-box div:hover,
+.test-box div:hover,
+.about-box div:hover{
+  transform:translateY(-10px) scale(1.03);
 }
 
-/* Form */
-.form-box{
-  width:380px;
-  margin:60px auto;
-  background:white;
-  padding:30px;
-  border-radius:20px;
-  box-shadow:0 10px 30px rgba(0,0,0,0.1);
-}
-
-.form-box h2{
-  text-align:center;
-  margin-bottom:20px;
-  color:#0f5132;
-}
-
-input, select{
-  width:100%;
-  padding:12px;
-  margin:10px 0;
-  border-radius:10px;
-  border:1px solid #ccc;
-}
-
-button{
-  width:100%;
-  padding:12px;
-  background:#16a34a;
-  color:white;
-  border:none;
-  border-radius:20px;
-  font-size:16px;
-  cursor:pointer;
-}
-
-button:hover{
-  background:#15803d;
-}
-
-#msg{
-  text-align:center;
-  margin-top:15px;
-  color:green;
-  font-weight:bold;
-}
-/* Smooth Page Animations */
-.hero h2, .hero p, .btn {
-  animation: fadeUp 1s ease forwards;
-}
-
-@keyframes fadeUp {
-  from {
-    opacity:0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity:1;
-    transform: translateY(0);
-  }
-}
-
-.features div {
-  opacity:0;
-  animation: fadeCard 1s ease forwards;
-}
-
-.features div:nth-child(1){ animation-delay:0.3s;}
-.features div:nth-child(2){ animation-delay:0.6s;}
-.features div:nth-child(3){ animation-delay:0.9s;}
-
-@keyframes fadeCard{
-  from{
-    opacity:0;
-    transform:scale(0.8);
-  }
-  to{
-    opacity:1;
-    transform:scale(1);
-  }
-}
-
-/* Button Glow */
-.btn:hover{
-  box-shadow:0 0 20px #a7f3d0;
-}
-
-/* Input focus animation */
-input:focus, select:focus{
-  outline:none;
-  border-color:#16a34a;
-  box-shadow:0 0 10px #a7f3d0;
-}
-
-/* Form pop-in */
-.form-box{
-  animation: pop 1s ease;
-}
-
-@keyframes pop{
-  from{transform:scale(0.8); opacity:0;}
-  to{transform:scale(1); opacity:1;}
-}
-.about{
-  padding:60px;
-  text-align:center;
-  color:#0f5132;
-}
-
-.about p{
-  max-width:800px;
-  margin:15px auto;
-  font-size:18px;
-}
-
-.about-box{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  margin-top:40px;
-}
-
-.about-box div{
-  background:white;
-  padding:25px;
-  width:250px;
-  border-radius:15px;
-  box-shadow:0 8px 20px rgba(0,0,0,0.1);
-}
-.how, .pricing, .stations, .testimonials{
-  padding:60px;
-  text-align:center;
-  color:#0f5132;
-}
-
-.how-box, .price-box, .test-box{
-  display:flex;
-  justify-content:center;
-  gap:30px;
-  margin-top:30px;
-}
-
-.how-box div, .price-box div, .test-box div{
-  background:white;
-  padding:25px;
-  width:200px;
-  border-radius:15px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.1);
-}
-
+/* Pricing */
 .price-box div{
   background:#d1fae5;
   font-size:20px;
 }
 
+/* Stations */
 .stations ul{
   list-style:none;
   font-size:18px;
@@ -256,70 +136,49 @@ input:focus, select:focus{
   margin:10px;
 }
 
-
-.stations li{
-  margin:10px;
-}
-.contact{
-  padding:60px;
-  text-align:center;
-  color:#0f5132;
-}
-
-.contact-box{
-  display:flex;
-  justify-content:center;
-  gap:40px;
-  margin-top:30px;
-}
-
+/* Forms */
+.form-box,
+.review-form,
 .contact-box form{
   background:white;
   padding:30px;
   border-radius:20px;
-  width:300px;
   box-shadow:0 10px 20px rgba(0,0,0,0.1);
 }
 
-.contact-box textarea{
+.form-box{
+  width:380px;
+  margin:60px auto;
+}
+
+input, select, textarea{
   width:100%;
-  height:100px;
-  padding:10px;
+  padding:12px;
   margin:10px 0;
   border-radius:10px;
   border:1px solid #ccc;
 }
 
-.contact-info{
-  background:#d1fae5;
-  padding:30px;
+input:focus, textarea:focus, select:focus{
+  outline:none;
+  border-color:#16a34a;
+  box-shadow:0 0 10px #a7f3d0;
+}
+
+button{
+  background:#16a34a;
+  color:white;
+  border:none;
+  padding:12px;
   border-radius:20px;
-  width:300px;
-}
-.reviews{
-  padding:60px;
-  text-align:center;
-  color:#0f5132;
+  cursor:pointer;
 }
 
-.review-form{
-  width:400px;
-  margin:20px auto;
-  background:white;
-  padding:20px;
-  border-radius:15px;
-  box-shadow:0 10px 20px rgba(0,0,0,0.1);
+button:hover{
+  background:#15803d;
 }
 
-.review-form textarea{
-  width:100%;
-  height:80px;
-  margin:10px 0;
-  padding:10px;
-  border-radius:10px;
-  border:1px solid #ccc;
-}
-
+/* Reviews */
 #reviewList{
   max-width:600px;
   margin:30px auto;
@@ -332,46 +191,64 @@ input:focus, select:focus{
   border-radius:10px;
   text-align:left;
 }
-/* Mobile Responsive */
-@media (max-width:768px){
 
+/* Footer */
+.footer{
+  background:#0f5132;
+  color:white;
+  text-align:center;
+  padding:30px 10px;
+}
+
+.footer p{
+  color:#d1fae5;
+  font-size:14px;
+}
+
+/* Animations */
+.hero h2, .hero p, .btn{
+  animation:fadeUp 1s ease forwards;
+}
+
+@keyframes fadeUp{
+  from{opacity:0; transform:translateY(40px);}
+  to{opacity:1; transform:translateY(0);}
+}
+
+/* Mobile */
+@media(max-width:768px){
   header{
     flex-direction:column;
-    text-align:center;
-  }
-
-  nav{
-    margin-top:10px;
   }
 
   .hero h2{
     font-size:32px;
   }
 
-  .features, .how-box, .price-box, .test-box, .about-box, .contact-box{
+  section{
+    padding:40px 20px;
+  }
+
+  .features,
+  .how-box,
+  .price-box,
+  .test-box,
+  .about-box,
+  .contact-box{
     flex-direction:column;
     align-items:center;
   }
 
-  .features div, 
+  .features div,
   .how-box div,
   .price-box div,
   .test-box div,
   .about-box div,
-  .contact-box form,
-  .contact-info{
+  .contact-box form{
     width:90%;
   }
 
   .review-form{
     width:90%;
   }
-
-  .stations ul{
-    padding:0;
-  }
 }
-
-
-
-
