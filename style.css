@@ -332,6 +332,46 @@ input:focus, select:focus{
   border-radius:10px;
   text-align:left;
 }
+/* Mobile Responsive */
+@media (max-width:768px){
+
+  header{
+    flex-direction:column;
+    text-align:center;
+  }
+
+  nav{
+    margin-top:10px;
+  }
+
+  .hero h2{
+    font-size:32px;
+  }
+
+  .features, .how-box, .price-box, .test-box, .about-box, .contact-box{
+    flex-direction:column;
+    align-items:center;
+  }
+
+  .features div, 
+  .how-box div,
+  .price-box div,
+  .test-box div,
+  .about-box div,
+  .contact-box form,
+  .contact-info{
+    width:90%;
+  }
+
+  .review-form{
+    width:90%;
+  }
+
+  .stations ul{
+    padding:0;
+  }
+}
+
 
 
 
